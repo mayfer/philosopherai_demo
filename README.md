@@ -7,3 +7,9 @@ This is an isolated script you can run, which executes the same core functionali
 What made Philosopher AI work as well as it does is not the result of complex programming: it's the result of a lot of tinkering with certain details to get the balance *just right*.
 
 Feel free to explore what those are on your own :)
+
+## How to run the script
+
+`npm install`
+
+`node philosopher_demo.js`

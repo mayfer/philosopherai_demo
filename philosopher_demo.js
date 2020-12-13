@@ -76,7 +76,8 @@ async function get_gpt3_response({prompt, opts}) {
 
         return response;
     } else {
-        return '';
+        console.log(completion.response);
+        return null;
     }
 }
 
@@ -88,6 +89,9 @@ async function get_philosopher_response({topic}) {
     for(let j=0; j<continuations; j++) {
         let prompt = await get_prompt_for_ongoing_query({topic, prev_completions: past_responses});
         let response = await get_gpt3_response({prompt});
+        if(!response) {
+            break;
+        }
 
         for(let prev_response of past_responses) {
             if(stringSimilarity.compareTwoStrings(response, prev_response) > 0.95) {
