@@ -10,6 +10,8 @@ Feel free to explore what those are on your own :)
 
 ## How to run the script
 
+First, enter your OpenAI credentials at the top of the file `philosopher_demo.js`.
+
 `npm install`
 
 `node philosopher_demo.js`
